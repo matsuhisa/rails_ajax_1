@@ -11,8 +11,10 @@
   %tbody
     - @books.each do |book|
       %tr
-        %td= book.title
-        %td= link_to 'Show', book
+        %td= link_to book.title, book
+        %td{ data: {controller: "favorite-book", action: "click->favorite-book#add"} }
+          %span.favorite-book-count{ data: {target: "favorite-book.count", book_id: book.id} }
+            = book.favorites.count
         %td= link_to 'Edit', edit_book_path(book)
         %td= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }
 
