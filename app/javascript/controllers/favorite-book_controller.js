@@ -9,25 +9,12 @@ export default class extends Controller {
 
   add() {
     const book_id = this.countTarget.getAttribute("data-book-id")
-    let url = "/favorites"
+    let url = "/favorites.json"
     let csrfToken = Rails.csrfToken()
     let data = {favorite: {user_id: "1", book_id: book_id}}
 
-    // Rails.ajax({
-    //   url: url,
-    //   type: "POST",
-    //   data: `favorite[user_id]=1&favorite[book_id]=${book_id}`,
-    //   success: function(data) {
-    //     console.log(data);
-    //   }
-    // });
-
-    // console.log(document.head.querySelector("meta[name=csrf-token]").content);
-    // console.log(Rails.csrfToken());
-
     fetch(url, {
       method: "POST",
-      // body: `favorite[user_id]=1&favorite[book_id]=${book_id}`,
       body: JSON.stringify(data),
       dataType: 'json',
       headers: {
@@ -36,7 +23,7 @@ export default class extends Controller {
       }
     })
     .then(response => {
-      console.table(response);
+      console.table(response.json())
     })
   }
 }
