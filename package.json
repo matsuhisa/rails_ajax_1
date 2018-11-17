@@ -5,7 +5,11 @@
     "@rails/webpacker": "3.5",
     "stimulus": "^1.1.0"
   },
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
+    "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
     "webpack-dev-server": "2.11.2"
   }
