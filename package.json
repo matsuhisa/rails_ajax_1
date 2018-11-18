@@ -12,6 +12,7 @@
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.6.0",
+    "jsdom-mount": "^0.1.0",
     "webpack-dev-server": "2.11.2"
   }
 }
