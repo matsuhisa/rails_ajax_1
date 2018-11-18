@@ -1,4 +1,4 @@
-import Hello from "../../app/javascript/models/hello"
+import Hello from "../../../app/javascript/models/hello"
 
 describe('#greet', () => {
   it('', () => {
