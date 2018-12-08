@@ -1,3 +1,6 @@
+import Rails from 'rails-ujs'
+// Rails.start()
+
 export default class FavoriteBook {
   add(userId = 1, bookId) {
     const url = '/favorites.json'
