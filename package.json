@@ -8,10 +8,16 @@
   "scripts": {
     "test": "jest"
   },
+  "jest": {
+    "setupFiles": [
+      "./config/setupJest.js"
+    ]
+  },
   "devDependencies": {
     "babel-jest": "^23.6.0",
     "babel-preset-env": "^1.7.0",
     "jest": "^23.6.0",
+    "jest-fetch-mock": "^2.0.1",
     "jsdom-mount": "^0.1.0",
     "rails-ujs": "^5.2.2",
     "webpack-dev-server": "2.11.2"
