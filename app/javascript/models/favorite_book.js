@@ -17,8 +17,11 @@ export default class FavoriteBook {
       }
     })
     .then(response => {
-      console.log("response:")
-      return response.json()
+      if(response.ok) {
+        return response.json()
+      }else{
+        return { status: response.status }
+      }
     })
   }
 }
